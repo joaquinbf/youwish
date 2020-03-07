@@ -1,0 +1,22 @@
+{
+    "1" : {
+        "nombre" : "mouse",
+        "precio" : 400,
+        "cantidad" : 200
+    },
+    "2" : {
+        "nombre" : "teclado",
+        "precio" : 400,
+        "cantidad" : 200
+    },
+    "3" : {
+        "nombre" : "monitor",
+        "precio" : 400,
+        "cantidad" : 200
+    },
+    "4" : {
+        "nombre" : "pc",
+        "precio" : 400,
+        "cantidad" : 200
+    }
+}

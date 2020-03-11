@@ -12,7 +12,7 @@ En general, instalar pipenv se puede lograr mediante el comando:
 pip install pipenv
 ```
 
-Para crear un entorno desde cero se debe ejecutar el comando:
+Para crear un entorno desde cero se debe ejecutar el comando (idem para iniciar un entorno ya creado):
 
 ```
 pipenv shell

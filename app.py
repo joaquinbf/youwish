@@ -1,5 +1,9 @@
 from flask import Flask
 from flask import render_template
+from flask import request
+from flask import url_for
+from flask import redirect
+import op
 import json
 
 # Se crea un servidor
@@ -18,5 +22,6 @@ def productos():
     return productos
 
 # Se inicia el servidor en el puerto 4000 del localhost
-app.run(debug=True, port=4000)
+if __name__ == "__main__":
+    app.run(debug=True, port=4000)
 

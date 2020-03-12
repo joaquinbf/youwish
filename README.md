@@ -1,5 +1,20 @@
 # YouWish
+## Notas de instalacion.
+Para ejecutar la aplicacion en un browser se debe instalar pipenv mediante el comando:
 
+```
+pip install pipenv
+```
+
+Luego iniciar el entorno virtual con el comando:
+```
+pipenv shell
+```
+
+Finalmente con el siguiente quedan instaladas todos los modulos necesarios para la aplicacion.
+```
+pipenv install --ignore-pipfile
+```
 ## Notas de desarrollo.
 
 Para sistematizar el desarrollo de la aplicación y facilitar el flujo de trabajo, se utiliza pipenv como gestor de paquetes. 

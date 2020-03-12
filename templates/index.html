@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>WishPyStock</title>
     <link rel="shortcut icon" href="{{url_for('static', filename='favicon.png')}}" type="image/x-icon">
 
@@ -13,42 +14,115 @@
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:900i&display=swap" rel="stylesheet">
 
     <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 </head>
 
 <body>
-    
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <a id="navbar-brand-custom" class="navbar-brand" href="/">WishPyStock</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/"><img id="logo" src="{{url_for('static', filename='favicon.png')}}"
+                        height="32rem"><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a id="title-navbar" class="nav-link" href="/">WishPyStock</a>
+            </li>
+
+        </ul>
     </nav>
 
-    </nav>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-3" style="text-align: left;">
+                <input class="form-control form-control-custom" type="search" placeholder="Buscar" aria-label="Search">
+
+                <h6 class="h6">Condicion del producto:</h6>
+                <ul>
+                    <li><a href="/">Nuevo</a></li>
+                    <li><a href="/">Usado</a></li>
+
+                </ul>
+                <h6 class="h6">Ordenar por precio:</h6>
+                <ul>
+                    <li><a href="/">Mayor precio</a></li>
+                    <li><a href="/">Menor precio</a></li>
+
+                </ul>
+                <h6 class="h6">Categoria:</h6>
+                <ul>
+                    <li><a href="/">Moda</a></li>
+                    <li><a href="/">Tecnologia</a></li>
+                </ul>
+
+                <h6 class="h6">Descuentos:</h6>
+                <ul>
+                    <li><a href="/">15%</a></li>
+                    <li><a href="/">20%</a></li>
+                </ul>
+                <h6 class="h6">Marcas:</h6>
+                <ul>
+                    <li><a href="/">Marca1</a></li>
+                    <li><a href="/">Marca2</a></li>
+                </ul>
+                <h6 class="h6">Filtrar por calificacion:</h6>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light">1</button>
+                    <button type="button" class="btn btn-light">2</button>
+                    <button type="button" class="btn btn-light">3</button>
+                    <button type="button" class="btn btn-light">4</button>
+                    <button type="button" class="btn btn-light">5</button>
+                </div>
+                <h6 class="h6">Rango de precios:</h6>
+                <div class="form-row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Minimo">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Maximo">
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="card col-4">
+                        <img src="{{url_for('static', filename='img_prod/ejemplo.jpeg')}}" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card col-4">
+                        <img src="{{url_for('static', filename='img_prod/ejemplo.jpeg')}}" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card col-4">
+                        <img src="{{url_for('static', filename='img_prod/ejemplo.jpeg')}}" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- JS BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

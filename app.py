@@ -33,8 +33,13 @@ def index():
 """ ruta condicion """
 @app.route('/condition/')
 def condicion_del_producto():
+    """ se pide la condicion enviada por parametro junto el request"""
     c = request.args.get('condicion')
+
+    """ se filtra segun la condicion """
     productos = op.filtrar_por_condicion(db, c)
+
+    """ se obtienen el resto de los datos necesarios para renderizar """
     categorias = op.categorias(db)
     marcas = op.marcas(db)
     descuentos = op.descuentos(db)

@@ -1,6 +1,7 @@
 # YouWish
-## Notas de instalacion.
-Para ejecutar la aplicacion en un browser se debe instalar pipenv mediante el comando:
+## Notas de instalación con pipenv.
+
+Para ejecutar la aplicación en un browser se debe instalar pipenv mediante el comando:
 
 ```
 pip install pipenv
@@ -15,7 +16,17 @@ Finalmente con el siguiente quedan instaladas todos los modulos necesarios para 
 ```
 pipenv install --ignore-pipfile
 ```
-## Notas de desarrollo.
+
+## Notas de instalación con Docker.
+
+En primer lugar, instalar Docker y asegurarse de que se este ejecutando (esto depende de su SO).
+
+Luego ejecute el siguiente comando para generar la imagen base.
+```
+docker build -t wpsapp .
+```
+
+## Notas de desarrollo con Pipenv.
 
 Para sistematizar el desarrollo de la aplicación y facilitar el flujo de trabajo, se utiliza pipenv como gestor de paquetes. 
 
@@ -62,3 +73,29 @@ pipenv install --ignore-pipfile
 ```
 
 Para salir del entorno virtual, simplemente se debe ejecutar el comando `exit`
+
+## Notas de ejecución con pipenv.
+
+Ejecutar el siguiente comando para iniciar el entorno (si ya se esta ejecutando el entorno, entonces saltear el paso)
+
+```
+pipenv shell
+```
+
+Finalmente se ejecuta el comando en python
+
+```
+python app.py
+```
+
+y se abre un explorador en la dirección `localhost:4000`. Esto mismo se indica en la terminal al momento de ejecutar la aplicación.
+
+## Notas de ejecución con Docker
+
+Ejecutar el siguiente comando (asegurarse de que Docker esta corriendo)
+
+```
+docker run -it -p 4000:4000 wpsapp
+```
+
+y la aplicación ya estará disponible en la dirección `localhost:4000`

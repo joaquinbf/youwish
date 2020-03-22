@@ -25,6 +25,4 @@ def index():
 
 # Se inicia el servidor en el puerto 4000 del localhost
 if __name__ == "__main__":
-    app.jinja_env.auto_reload = True
-    app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(debug=True, port=4000)
+    app.run(host="0.0.0.0", debug=True, port=4000)

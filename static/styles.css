@@ -1,21 +1,156 @@
-#title-navbar {
-    font-family: 'Alegreya', serif;
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: #3c3c3d;
+}
+
+body header nav a:link, body header nav a:hover, body header nav a:active, body header nav a:visited {
+    text-decoration-style: none;
+    color: white;
+}
+
+dl dd a:link, dl dd a:hover, dl dd a:active, dl dd a:visited {
+    text-decoration-style: none;
+    color: white;
+}
+
+body header nav a {
+    font-family: 'Yantramanav', sans-serif;
+    color: white;
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
-.card {
-    border: 0rem;
+.header-nav {
+    background-color: #3c3c3d;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0rem;
 }
 
-.btn {
-    background-color: white;
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    display: none;
 }
 
-ul {
+.form-search {
+    padding-right: 0rem;
+}
+
+.input-search {
+    font-family: 'Yantramanav', sans-serif;
+    -webkit-appearance: none;
+    text-align: center;
+    width: 20rem;
+    height: 2rem;
+    border: 0.01rem solid #ffffff;
+    border-radius: 1rem;
+}
+
+.corp {
+    margin-top: 0rem;
+}
+
+.catalog-corp {
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+}
+
+.main-corp, .foot {
+    background-color: #3c3c3d;
+}
+
+.navbar {
+    padding: 0rem;
+}
+
+.main-corp {
+    color: #ffffff;
+}
+
+.custom-form {
+    padding-bottom: 0rem;
+}
+
+.label-form {
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-form {
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 400;
+    background-color: #3c3c3d;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-range-price {
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    position: relative;
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    border: 0.01rem solid #ffffff;
+    text-align: center;
+    padding: 0rem;
+}
+
+.dd-form {
+    margin: 0rem;
+    height: 1rem;
+}
+
+.btn-send-range-price {
+    color: #ffffff;
+    background-color: #3c3c3d;
+    border: 0rem solid #ffffff;
+    font-weight: 600;
+}
+
+.foot {
+    text-align: center;
+}
+
+.catalog-corp, .catalog-list {
+    background-color: #f1f1f1;
+    padding: 0rem;
+}
+
+.catalog-list {
     list-style-type: none;
+    overflow: hidden;
 }
 
-li a:hover, li a:link, li a:visited, li a:active {
-    color: black;
-    text-decoration: none;
+.li-product {
+    float: left;
+    position: relative;
+    margin: 1rem;
+}
+
+.li-product:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-product {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17rem;
+    height: 17rem;
+}
+
+.card-product {
+    width: 17.25rem;
+    margin: 0rem;
 }

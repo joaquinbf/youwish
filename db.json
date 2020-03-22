@@ -1,22 +1,57 @@
 {
-    "1" : {
-        "nombre" : "mouse",
-        "precio" : 400,
-        "cantidad" : 200
-    },
-    "2" : {
-        "nombre" : "teclado",
-        "precio" : 400,
-        "cantidad" : 200
-    },
-    "3" : {
-        "nombre" : "monitor",
-        "precio" : 400,
-        "cantidad" : 200
-    },
-    "4" : {
-        "nombre" : "pc",
-        "precio" : 400,
-        "cantidad" : 200
-    }
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "nombre1",
+            "descripcion": "descripcion1",
+            "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDHwduLhJ1hCi3AA8u9PZX8d8Y_48LY065QysfE4jCB3BpZ-Y6Q&s",
+            "condicion": "nuevo",
+            "precio": 500,
+            "categorias": [
+                "Moda"
+            ],
+            "descuento": 0,
+            "marca": "Marca1",
+            "calificacion": 2,
+            "idVendedor": 1
+        },
+        {
+            "id": 2,
+            "nombre": "nombre2",
+            "descripcion": "descripcion2",
+            "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDHwduLhJ1hCi3AA8u9PZX8d8Y_48LY065QysfE4jCB3BpZ-Y6Q&s",
+            "condicion": "viejo",
+            "precio": 250,
+            "categorias": [
+                "Moda",
+                "Tecnologia"
+            ],
+            "descuento": 0,
+            "marca": "Marca2",
+            "calificacion": 2,
+            "idVendedor": 1
+        },
+        {
+            "id": 2,
+            "nombre": "nombre2",
+            "descripcion": "descripcion2",
+            "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDHwduLhJ1hCi3AA8u9PZX8d8Y_48LY065QysfE4jCB3BpZ-Y6Q&s",
+            "condicion": "viejo",
+            "precio": 250,
+            "categorias": [
+                "Moda",
+                "Tecnologia"
+            ],
+            "descuento": 0,
+            "marca": "Marca2",
+            "calificacion": 2,
+            "idVendedor": 1
+        }
+    ],
+    "vendedores": [
+        {
+            "id": 1,
+            "nombreVendedor": "juan perez"
+        }
+    ]
 }

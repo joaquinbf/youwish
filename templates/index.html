@@ -67,32 +67,29 @@
 
                 <dl class="custom-form">
                     <dt class="label-form">Categorias</dt>
+                    {% for c in categorias %}
                     <dd class="dd-form">
-                        <a href="/categorias/?categoria=categoriaN" class="btn-form">CategoriaN</a>
+                        <a href="/categorias/?categoria={{c}}" class="btn-form">{{c}}</a>
                     </dd>
-                    <dd class="dd-form">
-                        <a href="/categorias/?categoria=categoriaN" class="btn-form">CategoriaN</a>
-                    </dd>
+                    {% endfor %}
                 </dl>
 
                 <dl class="custom-form">
                     <dt class="label-form">Descuentos</dt>
+                    {% for d in descuentos %}
                     <dd class="dd-form">
-                        <a href="/descuentos/?descuento=descuentoNN" class="btn-form">NN%</a>
+                        <a href="/descuentos/?descuento={{d}}" class="btn-form">{{d}}%</a>
                     </dd>
-                    <dd class="dd-form">
-                        <a href="/descuentos/?descuento=descuentoNN" class="btn-form">NN%</a>
-                    </dd>
+                    {% endfor %}
                 </dl>
 
                 <dl class="custom-form">
                     <dt class="label-form">Marca</dt>
+                    {% for m in marcas %}
                     <dd class="dd-form">
-                        <a href="/marcas/?marca=marcaX" class="btn-form">MarcaX</a>
+                        <a href="/marcas/?marca={{m}}" class="btn-form">{{m}}</a>
                     </dd>
-                    <dd class="dd-form">
-                        <a href="/marcas/?marca=marcaX" class="btn-form">MarcaX</a>
-                    </dd>
+                    {% endfor %}
                 </dl>
 
                 <dl class="custom-form">

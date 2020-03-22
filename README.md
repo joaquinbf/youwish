@@ -1,5 +1,12 @@
 # YouWish
-## Notas de instalación con pipenv.
+## Notas de instalación con Pipenv.
+
+> Aclaración: Esta modalidad tiene ciertos pre requisitos:
+>
+> - Contar con python3
+> - Contar con pip3
+>
+> Esto se puede hacer en cualquier SO.
 
 Para ejecutar la aplicación en un browser se debe instalar pipenv mediante el comando:
 
@@ -65,7 +72,7 @@ pipenv install --ignore-pipfile
 
 Para salir del entorno virtual, simplemente se debe ejecutar el comando `exit`
 
-## Notas de ejecución con pipenv.
+## Notas de ejecución con Pipenv.
 
 Ejecutar el siguiente comando para iniciar el entorno (si ya se esta ejecutando el entorno, entonces saltear el paso)
 
@@ -85,22 +92,24 @@ y se abre un explorador en la dirección `localhost:4000`. Esto mismo se indica 
 
 ## Notas de instalación con Docker.
 
-Para asegurar la portabilidad de la aplicación y su desarrollo, se utiliza Docker. Los siguientes vídeos pueden ser de ayuda para entender que es docker, como instalarlo y usarlo.
+Para asegurar la portabilidad de la aplicación y su desarrollo, se puede utilizar Docker. Los siguientes vídeos pueden ser de ayuda para entender que es docker, como instalarlo y usarlo.
 
 - [¿Que es Docker?](https://www.youtube.com/watch?v=hQgvt-s-AHQ)
 - [¿Como se instala (windows 10)?](https://www.youtube.com/watch?v=BK-C2RofmTE) 
 - [¿Como se instala (ubuntu)?](https://www.youtube.com/watch?v=BK-C2RofmTE)
-- [¿Como se usa?](https://www.youtube.com/watch?v=YENw-bNHZwg&t=1464s)
+- [¿Como se uso para el desarrollo de la aplicacion?](https://www.youtube.com/watch?v=YENw-bNHZwg&t=1464s)
+
+> Nota: En windows, instale docker junto con su compatibilidad con contenedores linux, ya que la mayoría de la aplicación fue desarrollada en ese entorno. Acorde a esto, debe hacer un switch al modo de compatibilidad con contenedores linux. Esto ultimo se puede hacer desde el sub menú de configuración de docker en la barra de tareas
 
 En primer lugar, instalar Docker y asegurarse de que se este ejecutando (esto depende de su SO).
 
-Luego ejecute el siguiente comando para generar la imagen base.
+Luego ejecute el siguiente comando sobre la dirección de la carpeta donde haya colocado el código de la aplicación, para generar la imagen base.
 
 ```
 docker build -t wpsapp .
 ```
 
-
+Esto creara una imagen base llamada `wpsapp`. Tranquilamente puede tener cualquier otro nombre. Para asegurarse de que se creo correctamente, ejecute el comando `docker images`, que listara todas las imágenes creadas hasta el momento.
 
 ## Notas de ejecución con Docker
 
@@ -110,4 +119,4 @@ Ejecutar el siguiente comando (asegurarse de que Docker esta corriendo)
 docker run -it -p 4000:4000 wpsapp
 ```
 
-y la aplicación ya estará disponible en la dirección `localhost:4000`
+y la aplicación ya estará disponible en la dirección `localhost:4000`.

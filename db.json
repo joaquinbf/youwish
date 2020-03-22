@@ -20,7 +20,7 @@
             "nombre": "nombre2",
             "descripcion": "descripcion2",
             "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDHwduLhJ1hCi3AA8u9PZX8d8Y_48LY065QysfE4jCB3BpZ-Y6Q&s",
-            "condicion": "viejo",
+            "condicion": "usado",
             "precio": 250,
             "categorias": [
                 "Moda",
@@ -32,18 +32,18 @@
             "idVendedor": 1
         },
         {
-            "id": 2,
-            "nombre": "nombre2",
-            "descripcion": "descripcion2",
+            "id": 3,
+            "nombre": "nombre3",
+            "descripcion": "descripcion3",
             "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDHwduLhJ1hCi3AA8u9PZX8d8Y_48LY065QysfE4jCB3BpZ-Y6Q&s",
-            "condicion": "viejo",
+            "condicion": "reacondicionado",
             "precio": 250,
             "categorias": [
                 "Moda",
                 "Tecnologia"
             ],
             "descuento": 0,
-            "marca": "Marca2",
+            "marca": "Marca3",
             "calificacion": 2,
             "idVendedor": 1
         }

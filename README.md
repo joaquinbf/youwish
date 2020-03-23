@@ -1,13 +1,73 @@
 # WishPyStock
 
-## Notas de instalación con Pipenv.
+# Descargar el proyecto
+
+Este proyecto se puede descargar haciendo clic en el botón `Clone or Download` y luego `Download ZIP`. Previo a trabajar, descomprimir el archivo `.zip` descargado. 
+
+
+
+## Notas de instalación con Docker.
+
+Para asegurar la portabilidad de la aplicación y su desarrollo, se puede utilizar Docker. Los siguientes vídeos pueden ser de ayuda para entender que es docker, como instalarlo y usarlo.
+
+- [¿Que es Docker?](https://www.youtube.com/watch?v=hQgvt-s-AHQ)
+- [Un entorno movil con Docker](https://www.youtube.com/watch?v=0rOTx8DYH_E)
+
+Para su instalación recomendamos:
+
+- Guías oficiales para Windows
+  - [Directamente desde la pagina](https://www.docker.com/products/docker-desktop)
+
+- Guías oficiales para linux
+  - [Instalacion usando repositorios](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository)
+  - [Post instalacion en linux (muy recomendado)](https://docs.docker.com/install/linux/linux-postinstall/)
+- Guías no oficiales para Windows y Linux.
+  - [¿Como se instala (windows 10)?](https://www.youtube.com/watch?v=BK-C2RofmTE) 
+  - [¿Como se instala (ubuntu)?](https://www.youtube.com/watch?v=Q5YtjXoCfPs)
+- [¿Como se uso para el desarrollo de la aplicacion?](https://www.youtube.com/watch?v=YENw-bNHZwg&t=1464s)
+
+> Nota: En windows, instale docker junto con su compatibilidad con contenedores linux, ya que la mayoría de la aplicación fue desarrollada en ese entorno. Acorde a esto, debe hacer un switch al modo de compatibilidad con contenedores linux. Esto ultimo se puede hacer desde el sub menú de configuración de docker en la barra de tareas
+
+En primer lugar, instalar Docker y asegurarse de que se este ejecutando (esto depende de su SO pero se puede probar mediante el comando `docker run hello-world`).
+
+## Notas de desarrollo con VSCODE y Docker
+
+Para continuar el desarrollo de la aplicación es importante tener el editor de código [Visual Studio Code](https://code.visualstudio.com/). Es una herramienta profesional que sera de mucha ayuda para la gestión de archivos y contenedores. Esta disponible para todos los sistemas operativos y su [instalación](https://www.youtube.com/watch?v=zbycB-Yetb0) es muy sencilla.
+
+Junto VSCode, es necesario tener algunas extensiones que nos van a facilitar en gran medida el proceso de creación y mantenimiento de contenedores. En primer lugar accedemos a la sección de extensiones e instalamos `Docker` de Microsoft y `Remote Development` tambien de Microsoft.
+
+![](https://www.mclibre.org/consultar/informatica/img/vscode/vsc-perso-idioma-1.png)
+
+![](https://josejuansanchez.org/curso-docker/images/installdockerextension.png)
+
+
+
+Después abrimos una nueva ventana de VSCode y movemos la carpeta de la aplicación al editor. Inmediatamente nos aparecerá un mensaje que comunica la existencia de un archivo `devcontainer` y nos da la opción de `reopen folder in a container` , es decir, reabrir la carpeta en un contendedor. Hacer clic sobre esa opción y esperar unos minutos a que se cree el container. 
+
+Una vez terminada la operación, podemos abrir una terminal (barra superior `Terminal > New Terminal` ) y notar que la dirección sobre la se encuentra no es la de la carpeta sino otra. Esto indica que ya estamos dentro del contenedor, donde podemos ejecutar la aplicación mediante el comando
+
+```powershell
+python3 app.py
+```
+
+Abrir un navegador y colocar en la barra superior la dirección `http://127.0.0.1:4000/` y podremos ver el primera pagina de la app.
+
+Una vez creado el container, no es necesario volver a crearlo. Se puede acceder a el mediante la sección `remote explorer` y abriendo el container que adecuado.
+
+![](https://code.visualstudio.com/assets/docs/remote/containers/containers-explorer-python.png)
+
+
+
+
+
+## Notas de instalación con Pipenv (Opcional).
 
 > Aclaración: Esta modalidad tiene ciertos pre requisitos:
 >
-> - Contar con python3
-> - Contar con pip3
+> - Contar con python3: Se puede saber si esta instalado mediante el comando `python3 –version` y debe aparecer el mensaje `python 3.*.*`
+> - Contar con pip3: Se puede saber si esta instalado mediante el comando `pip3 --version` y debe aparecer el mensaje `pip 9.*.*`
 >
-> Esto se puede hacer en cualquier SO.
+> Esto se puede hacer en cualquier SO mediante la guia en la pagina [oficial de python](https://www.python.org/) o el siguiente [video tutorial](https://www.youtube.com/watch?v=9fNKy9zOPkg)
 
 Para ejecutar la aplicación en un browser se debe instalar pipenv mediante el comando:
 
@@ -20,12 +80,12 @@ Luego iniciar el entorno virtual con el comando:
 pipenv shell
 ```
 
-Finalmente con el siguiente quedan instaladas todos los modulos necesarios para la aplicacion.
+Finalmente con el siguiente quedan instaladas todos los módulos necesarios para la aplicación.
 ```
 pipenv install --ignore-pipfile
 ```
 
-## Notas de desarrollo con Pipenv.
+## Notas de desarrollo con Pipenv (Opcional).
 
 Para sistematizar el desarrollo de la aplicación y facilitar el flujo de trabajo, se utiliza pipenv como gestor de paquetes. 
 
@@ -73,7 +133,7 @@ pipenv install --ignore-pipfile
 
 Para salir del entorno virtual, simplemente se debe ejecutar el comando `exit`
 
-## Notas de ejecución con Pipenv.
+## Notas de ejecución con Pipenv (Opcional).
 
 Ejecutar el siguiente comando para iniciar el entorno (si ya se esta ejecutando el entorno, entonces saltear el paso)
 
@@ -87,39 +147,4 @@ Finalmente se ejecuta el comando en python
 python app.py
 ```
 
-y se abre un explorador en la dirección `localhost:4000`. Esto mismo se indica en la terminal al momento de ejecutar la aplicación.
-
-
-
-## Notas de instalación con Docker.
-
-Para asegurar la portabilidad de la aplicación y su desarrollo, se puede utilizar Docker. Los siguientes vídeos pueden ser de ayuda para entender que es docker, como instalarlo y usarlo.
-
-- [¿Que es Docker?](https://www.youtube.com/watch?v=hQgvt-s-AHQ)
-- [¿Como se instala (windows 10)?](https://www.youtube.com/watch?v=BK-C2RofmTE) 
-- [¿Como se instala (ubuntu)?](https://www.youtube.com/watch?v=BK-C2RofmTE)
-- [¿Como se uso para el desarrollo de la aplicacion?](https://www.youtube.com/watch?v=YENw-bNHZwg&t=1464s)
-
-> Nota: En windows, instale docker junto con su compatibilidad con contenedores linux, ya que la mayoría de la aplicación fue desarrollada en ese entorno. Acorde a esto, debe hacer un switch al modo de compatibilidad con contenedores linux. Esto ultimo se puede hacer desde el sub menú de configuración de docker en la barra de tareas
-
-En primer lugar, instalar Docker y asegurarse de que se este ejecutando (esto depende de su SO).
-
-Luego, ejecute el siguiente comando sobre la dirección de la carpeta donde haya colocado el código de la aplicación para generar la imagen base.
-
-```
-docker build -t wpsapp .
-```
-
-Esto creara una imagen base llamada `wpsapp`. Tranquilamente puede tener cualquier otro nombre. Para asegurarse de que se creo correctamente, ejecute el comando `docker images`, que listara todas las imágenes creadas hasta el momento.
-
-## Notas de ejecución con Docker
-
-Ejecutar el siguiente comando (asegurarse de que Docker esta corriendo)
-
-```
-docker run -it -p 4000:4000 wpsapp
-```
-
-y la aplicación ya estará disponible en la dirección `localhost:4000`. Cabe aclarar que el comando ejecuta la imagen y siguiendo las instrucciones dentro del archivo `Dockerfile`, se ejecuta la aplicación con el comando `["python3", "app.py"]`
-
-> Nota: Es posible que en los SO con base linux, los comandos se deban ejecutar anteponiendo `sudo`. Esto se puede seguir usando asi o seguir los pasos en esta [guia post instalacion para linux](https://docs.docker.com/install/linux/linux-postinstall/) para que no sea necesario ser usuario `root` para trabajar con docker (muy recomendado).
+y luego abrir un explorador en la dirección `localhost:4000`. Esto mismo se indica en la terminal al momento de ejecutar la aplicación.

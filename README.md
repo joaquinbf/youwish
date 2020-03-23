@@ -26,7 +26,7 @@ Para su instalación recomendamos:
   - [¿Como se instala (ubuntu)?](https://www.youtube.com/watch?v=Q5YtjXoCfPs)
 - [¿Como se uso para el desarrollo de la aplicacion?](https://www.youtube.com/watch?v=YENw-bNHZwg&t=1464s)
 
-> Nota: En windows, instale docker junto con su compatibilidad con contenedores linux, ya que la mayoría de la aplicación fue desarrollada en ese entorno. Acorde a esto, debe hacer un switch al modo de compatibilidad con contenedores linux. Esto ultimo se puede hacer desde el sub menú de configuración de docker en la barra de tareas
+> Nota: En Windows, instalar Docker junto con su compatibilidad con contenedores linux, ya que la mayoría de la aplicación fue desarrollada en ese entorno. Acorde a esto, debe hacer un switch al modo de compatibilidad con contenedores linux. Esto ultimo se puede hacer desde el sub menú de configuración de Docker en la barra de tareas
 
 En primer lugar, instalar Docker y asegurarse de que se este ejecutando (esto depende de su SO pero se puede probar mediante el comando `docker run hello-world`).
 
@@ -34,7 +34,7 @@ En primer lugar, instalar Docker y asegurarse de que se este ejecutando (esto de
 
 Para continuar el desarrollo de la aplicación es importante tener el editor de código [Visual Studio Code](https://code.visualstudio.com/). Es una herramienta profesional que sera de mucha ayuda para la gestión de archivos y contenedores. Esta disponible para todos los sistemas operativos y su [instalación](https://www.youtube.com/watch?v=zbycB-Yetb0) es muy sencilla.
 
-Junto VSCode, es necesario tener algunas extensiones que nos van a facilitar en gran medida el proceso de creación y mantenimiento de contenedores. En primer lugar accedemos a la sección de extensiones e instalamos `Docker` de Microsoft y `Remote Development` tambien de Microsoft.
+Junto a VSCode, es necesario tener algunas extensiones que nos van a facilitar en gran medida el proceso de creación y mantenimiento de contenedores. En primer lugar accedemos a la sección de extensiones e instalamos `Docker` de Microsoft y `Remote Development` tambien de Microsoft.
 
 ![](https://www.mclibre.org/consultar/informatica/img/vscode/vsc-perso-idioma-1.png)
 
@@ -52,7 +52,7 @@ python3 app.py
 
 Abrir un navegador y colocar en la barra superior la dirección `http://127.0.0.1:4000/` y podremos ver el primera pagina de la app.
 
-Una vez creado el container, no es necesario volver a crearlo. Se puede acceder a el mediante la sección `remote explorer` y abriendo el container que adecuado.
+Una vez creado el container, no es necesario volver a crearlo. Se puede acceder a el mediante la sección `remote explorer` y abriendo el container adecuado.
 
 ![](https://code.visualstudio.com/assets/docs/remote/containers/containers-explorer-python.png)
 

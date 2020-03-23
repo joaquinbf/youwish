@@ -1,4 +1,5 @@
-# YouWish
+# WishPyStock
+
 ## Notas de instalación con Pipenv.
 
 > Aclaración: Esta modalidad tiene ciertos pre requisitos:
@@ -103,7 +104,7 @@ Para asegurar la portabilidad de la aplicación y su desarrollo, se puede utiliz
 
 En primer lugar, instalar Docker y asegurarse de que se este ejecutando (esto depende de su SO).
 
-Luego ejecute el siguiente comando sobre la dirección de la carpeta donde haya colocado el código de la aplicación, para generar la imagen base.
+Luego, ejecute el siguiente comando sobre la dirección de la carpeta donde haya colocado el código de la aplicación para generar la imagen base.
 
 ```
 docker build -t wpsapp .
@@ -119,4 +120,6 @@ Ejecutar el siguiente comando (asegurarse de que Docker esta corriendo)
 docker run -it -p 4000:4000 wpsapp
 ```
 
-y la aplicación ya estará disponible en la dirección `localhost:4000`.
+y la aplicación ya estará disponible en la dirección `localhost:4000`. Cabe aclarar que el comando ejecuta la imagen y siguiendo las instrucciones dentro del archivo `Dockerfile`, se ejecuta la aplicación con el comando `["python3", "app.py"]`
+
+> Nota: Es posible que en los SO con base linux, los comandos se deban ejecutar anteponiendo `sudo`. Esto se puede seguir usando asi o seguir los pasos en esta [guia post instalacion para linux](https://docs.docker.com/install/linux/linux-postinstall/) para que no sea necesario ser usuario `root` para trabajar con docker (muy recomendado).

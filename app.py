@@ -10,46 +10,45 @@ import json
 db = None
 
 with open("db.json", "r") as db_file:
-    db = json.load(db_file)
-
+	db = json.load(db_file)
+	
 """ Se crea un servidor """
 app = Flask(__name__)
-
 
 """ ruta index """
 @app.route('/')
 def index():
-    productos = db["productos"]
-    categorias = op.categorias(db)
-    marcas = op.marcas(db)
-    descuentos = op.descuentos(db)
-    return render_template('index.html',
-                           productos=productos,
-                           categorias=categorias,
-                           marcas=marcas,
-                           descuentos=descuentos)
+	productos = db["productos"]
+	categorias = op.categorias(db)
+	marcas = op.marcas(db)
+	descuentos = op.descuentos(db)
+	return render_template(
+	    'index.html',
+	    productos=productos,
+	    categorias=categorias,
+	    marcas=marcas,
+	    descuentos=descuentos)
 
 
 """ ruta condicion """
 @app.route('/condition/')
 def condicion_del_producto():
-    """ se pide la condicion enviada por parametro junto el request"""
-    c = request.args.get('condicion')
+	""" se pide la condicion enviada por parametro junto el request"""
+	c = request.args.get('condicion')
+	""" se filtra segun la condicion """
+	productos = op.filtrar_por_condicion(db, c)
+	""" se obtienen el resto de los datos necesarios para renderizar """
+	categorias = op.categorias(db)
+	marcas = op.marcas(db)
+	descuentos = op.descuentos(db)
+	return render_template(
+	    'index.html',
+	    productos=productos,
+	    categorias=categorias,
+	    marcas=marcas,
+	    descuentos=descuentos)
 
-    """ se filtra segun la condicion """
-    productos = op.filtrar_por_condicion(db, c)
 
-    """ se obtienen el resto de los datos necesarios para renderizar """
-    categorias = op.categorias(db)
-    marcas = op.marcas(db)
-    descuentos = op.descuentos(db)
-    return render_template('index.html',
-                           productos=productos,
-                           categorias=categorias,
-                           marcas=marcas,
-                           descuentos=descuentos)
-
-
-# Se inicia el servidor en el puerto 4000 del localhost
+"""Se inicia el servidor en el puerto 4000 del localhost"""
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True, port=4000)
+	app.run(host="0.0.0.0", debug=True, port=4000)

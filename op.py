@@ -19,3 +19,11 @@ def descuentos(db):
 parametro """
 def filtrar_por_condicion(db, condicion):
     return db['productos']
+
+""" TODO: Debe listar todos los productos cuyo nombre o descripcion 
+contengan algunas de las palabras enviadas por parametros """
+def buscar_productos(db, palabras):
+    return db['productos']
+
+""" TODO: Agregar el resto de las funciones necesarias para que la
+aplicacion funcione perfectamente """
